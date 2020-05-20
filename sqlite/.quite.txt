@@ -1,0 +1,58 @@
+
+Commands sqllite:
+.open filename.db
+.open adfilm.db
+-----------------------
+SELECT * FROM users;
+SELECT * FROM activemove;
+SELECT * FROM inactivemove;
+.mode column
+.headers on
+DELETE FROM users WHERE id = 6;
+----------------------
+.quit
+
+
+
+CREATE TABLE users(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		name VARCHAR(50),
+		pasword VARCHAR(50));
+			
+			
+INSERT	 INTO users (name,pasword)
+VALUES ('adminfr','adminfr');				
++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+
+CREATE TABLE activemove(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		namemove VARCHAR(50),
+		stok VARCHAR(50),
+		quantity INTEGER ,
+		price INTEGER );	
+			
+INSERT	 INTO activemove(namemove, stok, quantity ,price)
+VALUES ('Lucifer','serial','72','5');
+
+
+CREATE TABLE inactivemove(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		namemove VARCHAR(50),
+		stok VARCHAR(50),
+		quantity INTEGER ,
+		price INTEGER );	
+			
+INSERT	 INTO inactivemove(namemove, stok, quantity ,price)
+VALUES ('Avengers','film','4','25');
+
+
+
+
+
+
+
+
+
+
+
+
